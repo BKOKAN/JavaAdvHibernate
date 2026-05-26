@@ -1,9 +1,6 @@
 package hr.algebra.test.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class ProgramObrazovanja {
@@ -12,7 +9,12 @@ public class ProgramObrazovanja {
     private int programObrazovanjaID;
 
     private String naziv;
-    private int csvat;
+    @Column(name = "CSVET")
+    private int csvet;
+
+    public ProgramObrazovanja() {
+        this.csvet = csvet;
+    }
 
     public int getProgramObrazovanjaID() {
         return programObrazovanjaID;
@@ -27,10 +29,10 @@ public class ProgramObrazovanja {
     }
 
     public int getCsvat() {
-        return csvat;
+        return csvet;
     }
 
-    public void setCsvat(int csvat) {
-        this.csvat = csvat;
+    public void setCsvat(int csvet) {
+        this.csvet = csvet;
     }
 }

@@ -9,11 +9,11 @@ public class Upis {
     private int upisID;
 
     @ManyToOne
-    @JoinColumn(name="IDProgramObrazovanja")
+    @JoinColumn(name = "IDProgramObrazovanja", referencedColumnName = "ProgramObrazovanjaID")
     private ProgramObrazovanja programObrazovanja;
 
     @ManyToOne
-    @JoinColumn(name="IDPolaznik")
+    @JoinColumn(name = "IDPolaznik", referencedColumnName = "PolaznikID")
     private Polaznik polaznik;
 
     public int getUpisID() {
